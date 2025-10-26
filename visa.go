@@ -835,14 +835,14 @@ func VersSubMinor() uint32 {
 }
 
 // PxiReserveTriggers reserves multiple trigger lines that the caller can then map and/or assert.
-func (instr Object) PxiReserveTriggers(cnt int16, trigBuses, trigLines *int16) (failureIndex int16, status Status) {
-	status = Status(C.viPxiReserveTriggers((C.ViSession)(instr),
-		(C.ViInt16)(cnt),
-		(*C.ViInt16)(trigBuses),
-		(*C.ViInt16)(trigLines),
-		(*C.ViInt16)(&failureIndex)))
-	return failureIndex, status
-}
+//func (instr Object) PxiReserveTriggers(cnt int16, trigBuses, trigLines *int16) (failureIndex int16, status Status) {
+//	status = Status(C.viPxiReserveTriggers((C.ViSession)(instr),
+//		(C.ViInt16)(cnt),
+//		(*C.ViInt16)(trigBuses),
+//		(*C.ViInt16)(trigLines),
+//		(*C.ViInt16)(&failureIndex)))
+//	return failureIndex, status
+//}
 
 // VxiServantResponse ?
 //func (instr Object) VxiServantResponse(mode int16, resp uint32) Status {
