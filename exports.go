@@ -16,7 +16,7 @@
 package visa
 
 /*
-#include <visa.h>
+#include <rsvisa/visa.h>
 */
 import "C"
 
