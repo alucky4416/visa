@@ -14,11 +14,8 @@
 // exported C functions it wraps. Clients would typically build an instrument
 // specific driver around the package but it can also be used directly.
 //
-// NI-VISA Drivers:
-//     http://www.ni.com/downloads/ni-drivers/
-//
-// NI-VISA Overview:
-//     http://www.ni.com/white-paper/3702/en/
+// R&S VISA Drivers:
+//     https://www.rohde-schwarz.com/jp/applications/rs-visa_56280-148812.html
 //
 // Operation specific sections:
 //     Resource Manager Functions and Operations
@@ -32,14 +29,14 @@
 package visa
 
 /*
-#cgo linux LDFLAGS: -lvisa
+#cgo linux LDFLAGS: -lrsvisa
 #cgo darwin LDFLAGS: -framework VISA
 #cgo windows LDFLAGS: -lvisa64 -L.
 #cgo windows CFLAGS: -IC:/Program\ Files/IVI\ Foundation/VISA/Win64/Include
 #cgo CFLAGS: -I.
 
 #include <stdlib.h>
-#include "visa.h"
+#include <visa.h>
 
 extern void go_cb(ViSession, ViEventType, ViEvent, ViAddr);
 ViHndlr get_go_cb(void) {
