@@ -36,7 +36,7 @@ package visa
 #cgo CFLAGS: -I.
 
 #include <stdlib.h>
-#include <visa.h>
+#include <rsvisa/visa.h>
 
 extern void go_cb(ViSession, ViEventType, ViEvent, ViAddr);
 ViHndlr get_go_cb(void) {
